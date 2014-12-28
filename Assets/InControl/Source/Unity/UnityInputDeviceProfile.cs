@@ -283,6 +283,8 @@ namespace InControl
 		protected static InputControlSource MouseButton0 = new UnityMouseButtonSource( 0 );
 		protected static InputControlSource MouseButton1 = new UnityMouseButtonSource( 1 );
 		protected static InputControlSource MouseButton2 = new UnityMouseButtonSource( 2 );
+        protected static InputControlSource MouseButton3 = new UnityMouseButtonSource(3);
+        protected static InputControlSource MouseButton4 = new UnityMouseButtonSource(4);
 
 		protected static InputControlSource MouseXAxis = new UnityMouseAxisSource( "x" );
 		protected static InputControlSource MouseYAxis = new UnityMouseAxisSource( "y" );
