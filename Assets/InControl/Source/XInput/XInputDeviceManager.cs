@@ -69,7 +69,7 @@ namespace InControl
 			{
 				if (errors != null)
 				{
-					errors.Add( e.Message + ".dll could not be found or is missing a dependency." );
+					errors.Add( e.Message + " could not be found or is missing a dependency." );
 				}
 				return false;
 			}
