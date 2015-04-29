@@ -4,8 +4,35 @@ using UnityEngine;
 
 namespace InControl
 {
-	public class InputDevice
-	{
+    public interface IInputDevice {
+        TwoAxisInputControl LeftStick { get; }
+        TwoAxisInputControl RightStick { get; }
+        bool MenuWasPressed { get; }
+        InputControl AnyButton { get; }
+        InputControl LeftStickX { get; }
+        InputControl LeftStickY { get; }
+        InputControl RightStickX { get; }
+        InputControl RightStickY { get; }
+        InputControl DPadUp { get; }
+        InputControl DPadDown { get; }
+        InputControl DPadLeft { get; }
+        InputControl DPadRight { get; }
+        InputControl Action1 { get; }
+        InputControl Action2 { get; }
+        InputControl Action3 { get; }
+        InputControl Action4 { get; }
+        InputControl LeftTrigger { get; }
+        InputControl RightTrigger { get; }
+        InputControl LeftBumper { get; }
+        InputControl RightBumper { get; }
+        InputControl LeftStickButton { get; }
+        InputControl RightStickButton { get; }
+        float DPadX { get; }
+        float DPadY { get; }
+        TwoAxisInputControl Direction { get; }
+    }
+
+    public class InputDevice : IInputDevice{
 		public static readonly InputDevice Null = new InputDevice( "NullInputDevice" );
 
 		internal int SortOrder = int.MaxValue;
