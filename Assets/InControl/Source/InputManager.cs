@@ -20,7 +20,7 @@ namespace InControl
 		public static event Action<InputDevice> OnDeviceDetached;
 		public static event Action<InputDevice> OnActiveDeviceChanged;
 
-		static List<InputDeviceManager> inputDeviceManagers = new List<InputDeviceManager>();
+		static List<AbstractInputDeviceManager> inputDeviceManagers = new List<AbstractInputDeviceManager>();
 
 		static InputDevice activeDevice = InputDevice.Null;
 		static List<InputDevice> devices = new List<InputDevice>();
@@ -224,7 +224,7 @@ namespace InControl
 		}
 
 
-		public static void AddDeviceManager( InputDeviceManager inputDeviceManager )
+		public static void AddDeviceManager( AbstractInputDeviceManager inputDeviceManager )
 		{
 			AssertIsSetup();
 
@@ -233,7 +233,7 @@ namespace InControl
 		}
 
 
-		public static void AddDeviceManager<T>() where T : InputDeviceManager, new()
+		public static void AddDeviceManager<T>() where T : AbstractInputDeviceManager, new()
 		{
 			if (!HasDeviceManager<T>())
 			{
@@ -242,7 +242,7 @@ namespace InControl
 		}
 
 
-		public static bool HasDeviceManager<T>() where T : InputDeviceManager
+		public static bool HasDeviceManager<T>() where T : AbstractInputDeviceManager
 		{
 			int inputDeviceManagerCount = inputDeviceManagers.Count;
 			for (int i = 0; i < inputDeviceManagerCount; i++)

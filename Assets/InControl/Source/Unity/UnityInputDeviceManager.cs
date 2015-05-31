@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace InControl
 {
-	public class UnityInputDeviceManager : InputDeviceManager
+	public class UnityInputDeviceManager : AbstractInputDeviceManager
 	{
 		float deviceRefreshTimer = 0.0f;
 		const float deviceRefreshInterval = 1.0f;

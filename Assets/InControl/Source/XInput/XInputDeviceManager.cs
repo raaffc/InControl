@@ -8,7 +8,7 @@ using XInputDotNetPure;
 
 namespace InControl
 {
-	public class XInputDeviceManager : InputDeviceManager
+	public class XInputDeviceManager : AbstractInputDeviceManager
 	{
 		bool[] deviceConnected = new bool[] { false, false, false, false };
 
